@@ -1,0 +1,8 @@
+name          'devokun-ec2_instanceprofile_facts'
+version       '0.0.1'
+author        'devokun'
+license       'Apache License, Version 2.0'
+_license_comment 'starting with Puppet 2.7.0, Puppet is licensed with the Apache 2.0 license'
+summary       'Module to install EC2 Instance Profile facter facts'
+project_page  'https://github.com/DevoKun/puppet-ec2_instanceprofile_facts'
+
