@@ -1,0 +1,27 @@
+# http://docs.travis-ci.com/user/build-configuration/
+#file may have:
+#
+#    What programming language your project uses
+#    What commands or scripts you want to be executed before each build (for example, to install or clone your project's dependencies)
+#    What command is used to run your test suite
+#    Emails, Campfire and IRC rooms to notify about build failures
+#
+
+language: ruby
+before_install: rm Gemfile.lock || true
+rvm:
+  - 1.8.7
+  - 1.9.3
+script:
+  - "bundle exec rake spec"
+env:
+matrix:
+  - PUPPET_VERSION="~> 2.7.0"
+  - PUPPET_VERSION="~> 3.3.0"
+gemfile: .gemfile.travis
+notifications:
+email:
+  - devon@hubner.org
+
+
+
